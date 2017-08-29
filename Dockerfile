@@ -15,5 +15,13 @@ USER jenkins
 
 
 # Set Defaults
-ENV JAVA_OPTS="-Xmx8192m"
+#ENV JENKINS_HOME /Users/ramzihosisey/jenkins
+
+ENV JAVA_OPTS="-Xmx7048m -XX:MaxPermSize=10048m -Djava.awt.headless=true -Dhudson.model.DirectoryBrowserSupport.CSP= -Dorg.apache.commons.jelly.tags.fmt.timeZone=Asia/Jerusalem"
 ENV JENKINS_OPTS="--handlerCountStartup=100 --handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log  --webroot=/var/cache/jenkins/war"
+
+
+COPY plugins.txt /usr/share/jenkins/ref/
+#COPY custom.groovy /usr/share/jenkins/ref/init.groovy.d/custom.groovy
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+
