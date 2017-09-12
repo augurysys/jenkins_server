@@ -1,9 +1,9 @@
 ## Synopsis
 
-Building projects and 
-Running tests to detect bugs and other issues as soon as they are introduced
-Static code analysis
-Deployment
+Building projects \
+Running tests to detect bugs and other issues as soon as they are introduced \
+Static code analysis \
+Deployment \
 
 
 ## Installation
