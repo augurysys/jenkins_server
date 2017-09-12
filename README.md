@@ -15,7 +15,7 @@ Deployment
 2. open jenkins server port (8080 in this example)
 
  
-##runnin the image 
+##running the image 
 
 
 
